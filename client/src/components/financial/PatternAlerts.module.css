@@ -1,0 +1,323 @@
+/* ============================================================
+   PatternAlerts — severity cards with pulsing indicators
+   ============================================================ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  padding-left: 0.5rem;
+}
+
+/* ---- Card list ---- */
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  overflow-y: auto;
+}
+
+/* ---- Individual alert card ---- */
+.alertCard {
+  padding: 1.25rem 1.25rem 1rem;
+  border-left-width: 4px;
+  border-left-style: solid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+
+  /* Staggered entrance — starts invisible, slides in from right */
+  opacity: 0.8;
+}
+
+/* Hover glow — subtle radiance matching severity */
+.alertCard:hover {
+  box-shadow: 0 0 24px rgba(0, 212, 170, 0.08),
+              0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.cardCritical {
+  border-left-color: #ff3355;
+}
+
+.cardCritical:hover {
+  box-shadow: 0 0 20px rgba(255, 51, 85, 0.12),
+              0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.cardHigh {
+  border-left-color: #d4a574;
+}
+
+.cardHigh:hover {
+  box-shadow: 0 0 20px rgba(212, 165, 116, 0.12),
+              0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Staggered slide-in animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---- Header: title group + timestamp ---- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.alertTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- Pulsing severity dot indicators ---- */
+.pulseDotCritical,
+.pulseDotHigh {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pulseDotCritical {
+  background-color: #ff3355;
+  animation: pulseCritical 2s ease-in-out infinite;
+}
+
+.pulseDotHigh {
+  background-color: #d4a574;
+  animation: pulseHigh 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseCritical {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 51, 85, 0.7); }
+  50%  { box-shadow: 0 0 0 7px rgba(255, 51, 85, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 51, 85, 0); }
+}
+
+@keyframes pulseHigh {
+  0%   { box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.7); }
+  50%  { box-shadow: 0 0 0 7px rgba(212, 165, 116, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 165, 116, 0); }
+}
+
+/* ---- Timestamp (right-aligned, muted) ---- */
+.timestamp {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  text-align: right;
+}
+
+/* ---- Description ---- */
+.description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ---- Meta: account tags + state pills ---- */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tagGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+/* Account numbers — monospace, outlined */
+.accountTag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  background: rgba(17, 17, 24, 0.6);
+  border: 1px solid var(--border-subtle);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* State names — small pill badges */
+.statePill {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--accent-teal);
+  background: rgba(0, 212, 170, 0.08);
+  border: 1px solid rgba(0, 212, 170, 0.18);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---- Actions ---- */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.25rem;
+}
+
+.btnInvestigate {
+  background: rgba(0, 212, 170, 0.1);
+  color: #00d4aa;
+  border: 1px solid rgba(0, 212, 170, 0.35);
+  padding: 0.4rem 1.125rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.btnInvestigate:hover {
+  background: #00d4aa;
+  color: #0a0a0f;
+  box-shadow: 0 0 18px rgba(0, 212, 170, 0.4),
+              0 0 6px rgba(0, 212, 170, 0.25);
+}
+
+.btnInvestigate:active {
+  transform: scale(0.97);
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: rgba(17, 17, 24, 0.95);
+  border: 1px solid rgba(0, 212, 170, 0.3);
+  border-radius: 12px;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.modalHeader {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.closeBtn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modalBody {
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.casesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.casesTable th, .casesTable td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.casesTable th {
+  color: var(--accent-teal, #00d4aa);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.casesTable tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.factsCol {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.impactRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.impactValue {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent-amber, #d4a574);
+  background: rgba(212, 165, 116, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}

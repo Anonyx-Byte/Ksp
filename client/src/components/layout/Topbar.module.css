@@ -1,0 +1,234 @@
+.topbar {
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 255, 204, 0.05);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pageTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+}
+
+.breadcrumbRoot {
+  color: #555568;
+}
+
+.separator {
+  color: #3a3a4a;
+}
+
+.breadcrumbCurrent {
+  color: #00ffcc;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Search */
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  color: #555568;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 260px;
+  height: 34px;
+  padding: 0 12px 0 34px;
+  background: rgba(26, 26, 37, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.searchInput::placeholder {
+  color: #555568;
+  font-size: 0.78rem;
+}
+
+.searchInput:focus {
+  border-color: rgba(0, 255, 204, 0.25);
+  background: rgba(26, 26, 37, 0.9);
+  box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.06);
+}
+
+/* Notification */
+.notifBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #8b8b9e;
+  transition: all var(--transition-fast);
+}
+
+.notifBtn:hover {
+  background: rgba(0, 255, 204, 0.06);
+  color: var(--text-primary);
+}
+
+.notifDot {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  background: #ff3355;
+  border-radius: 50%;
+  border: 1.5px solid #0a0a0f;
+  animation: notif-pulse 2s ease-in-out infinite;
+}
+
+@keyframes notif-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* User */
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.userProfile:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ffcc, #00bfff);
+  color: #0a0a0f;
+  font-weight: 700;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.userRole {
+  font-size: 0.65rem;
+  color: #6b6b80;
+  font-family: var(--font-mono);
+}
+
+/* Search Dropdown */
+.searchDropdown {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 320px;
+  background: rgba(15, 15, 20, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 204, 0.15);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.searchItem {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.searchItem:hover {
+  background: rgba(0, 255, 204, 0.08);
+}
+
+.searchItemTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.searchItemDesc {
+  font-size: 0.7rem;
+  color: #8b8b9e;
+}
+
+.searchBadge {
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  align-self: flex-start;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.searchBadge.fir { background: rgba(0, 212, 170, 0.15); color: #00d4aa; }
+.searchBadge.suspect { background: rgba(255, 51, 85, 0.15); color: #ff3355; }
+.searchEmpty { padding: 12px; color: #8b8b9e; font-size: 0.8rem; text-align: center; }

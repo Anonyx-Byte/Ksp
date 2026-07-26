@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Vertical stack — each panel gets FULL width */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.panel {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.panelTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.panelSubtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem 0;
+  font-family: var(--font-mono);
+}
+
+.chartTall {
+  height: 380px;
+  width: 100%;
+}

@@ -1,0 +1,218 @@
+.container {
+  width: 100%;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-secondary);
+}
+
+.th, .thExpand, .thBar {
+  padding: 10px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+}
+
+.thExpand { width: 28px; }
+.thBar { width: 120px; }
+
+.row {
+  cursor: pointer;
+  transition: background 0.15s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.row:hover { background: rgba(0, 255, 204, 0.03); }
+.rowExpanded { background: rgba(0, 255, 204, 0.05); }
+
+.tdExpand { padding: 8px 4px; text-align: center; }
+
+.chevron {
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+.chevronOpen {
+  transform: rotate(90deg);
+  color: #00ffcc;
+}
+
+.tdName {
+  padding: 8px 10px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.tdScore {
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.tdBar { padding: 8px 10px; }
+
+.barTrack {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.tdNum {
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-primary);
+}
+
+.tdTrend {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.tdCrime {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Expanded Station Panel */
+.expandedRow {
+  background: rgba(0, 255, 204, 0.015);
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.stationPanel {
+  padding: 16px 20px;
+}
+
+.stationHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stationTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00ffcc;
+}
+
+.stationMeta {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.stationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.stationCard {
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+
+.stationCard:hover {
+  border-color: rgba(0, 255, 204, 0.15);
+}
+
+.stationCardTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.stationCardName {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stationStats {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.stationStatMain {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stationStatSub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.stationBarTrack {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.stationBarFill {
+  height: 100%;
+  background: #00ffcc;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.stationCrime {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Scrollbar */
+.tableWrap::-webkit-scrollbar { width: 4px; height: 4px; }
+.tableWrap::-webkit-scrollbar-track { background: transparent; }
+.tableWrap::-webkit-scrollbar-thumb { background: rgba(0, 255, 204, 0.15); border-radius: 2px; }

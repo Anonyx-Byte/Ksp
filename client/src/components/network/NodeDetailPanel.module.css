@@ -1,0 +1,313 @@
+/* NodeDetailPanel.module.css — Slide-in panel with glassmorphism + risk gauge */
+
+/* ── Panel container ────────────────────────────────────── */
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 340px;
+  height: 100%;
+  background: rgba(17, 17, 24, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(0, 212, 170, 0.15);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.6);
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-primary);
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 212, 170, 0.1);
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 51, 85, 0.15);
+  border-color: rgba(255, 51, 85, 0.3);
+  color: #ff3355;
+}
+
+/* ── Type & Role Badges ─────────────────────────────────── */
+.typeBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+.type_suspect {
+  background: rgba(255, 51, 85, 0.15);
+  color: #ff3355;
+  border: 1px solid rgba(255, 51, 85, 0.3);
+}
+
+.type_victim {
+  background: rgba(0, 191, 255, 0.15);
+  color: #00bfff;
+  border: 1px solid rgba(0, 191, 255, 0.3);
+}
+
+.type_location {
+  background: rgba(0, 212, 170, 0.15);
+  color: #00d4aa;
+  border: 1px solid rgba(0, 212, 170, 0.3);
+}
+
+.type_account {
+  background: rgba(124, 58, 237, 0.15);
+  color: #7c3aed;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.type_phone {
+  background: rgba(212, 165, 116, 0.15);
+  color: #d4a574;
+  border: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.roleBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+/* ── Content area ───────────────────────────────────────── */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Risk Score Gauge ───────────────────────────────────── */
+.gaugeSection {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gaugeLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 10px;
+}
+
+.gaugeTrack {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  overflow: visible;
+}
+
+.gaugeFill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.gaugeValue {
+  position: absolute;
+  right: 0;
+  top: -24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gaugeRiskLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* ── Detail Grid ────────────────────────────────────────── */
+.detailGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.detailValue {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── Associates section ─────────────────────────────────── */
+.associatesSection {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.associatesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.associateChip {
+  padding: 4px 12px;
+  background: rgba(255, 51, 85, 0.1);
+  border: 1px solid rgba(255, 51, 85, 0.2);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #ff6688;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.associateChip:hover {
+  background: rgba(255, 51, 85, 0.2);
+  border-color: rgba(255, 51, 85, 0.4);
+}
+
+/* ── Action Buttons ─────────────────────────────────────── */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 212, 170, 0.1);
+}
+
+.btnInvestigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background: var(--accent-teal, #00d4aa);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.2);
+}
+
+.btnInvestigate:hover {
+  background: #00f2c2;
+  box-shadow: 0 0 24px rgba(0, 212, 170, 0.35);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btnIcon {
+  font-size: 1rem;
+}

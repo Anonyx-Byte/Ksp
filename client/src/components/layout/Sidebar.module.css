@@ -1,0 +1,188 @@
+.sidebar {
+  width: var(--sidebar-width-collapsed);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 10, 15, 0.96);
+  backdrop-filter: blur(16px);
+  border-right: 1px solid rgba(0, 255, 204, 0.06);
+  overflow: hidden;
+  transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+.sidebar:hover {
+  width: var(--sidebar-width-expanded);
+}
+
+/* Logo */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(0, 255, 204, 0.06);
+  min-height: 60px;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffcc;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.4));
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.1s;
+  white-space: nowrap;
+}
+
+.sidebar:hover .logoText {
+  opacity: 1;
+}
+
+.logoTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #00ffcc;
+  text-shadow: 0 0 12px rgba(0, 255, 204, 0.5);
+  line-height: 1;
+}
+
+.logoSub {
+  font-size: 0.58rem;
+  color: #6b6b80;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navItem:hover {
+  background: rgba(0, 255, 204, 0.04);
+}
+
+.navItem:hover .navIcon {
+  color: #b0b0c0;
+}
+
+.navIcon {
+  color: #555568;
+  flex-shrink: 0;
+  transition: color 0.18s ease;
+}
+
+.navLabel {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #a0a0b2;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.08s;
+}
+
+.sidebar:hover .navLabel {
+  opacity: 1;
+}
+
+/* Active state */
+.active {
+  background: rgba(0, 255, 204, 0.07) !important;
+}
+
+.active .navIcon {
+  color: #00ffcc !important;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 204, 0.3));
+}
+
+.active .navLabel {
+  color: #e8e8ed;
+  font-weight: 600;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: #00ffcc;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+}
+
+/* Footer */
+.footer {
+  padding: 12px 14px;
+  border-top: 1px solid rgba(0, 255, 204, 0.06);
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+}
+
+.statusIcon {
+  color: #00ffcc;
+  flex-shrink: 0;
+  animation: pulse-status 2s ease-in-out infinite;
+}
+
+@keyframes pulse-status {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.statusText {
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  color: #555568;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.08s;
+}
+
+.sidebar:hover .statusText {
+  opacity: 1;
+}
+
+/* Scrollbar */
+.nav::-webkit-scrollbar {
+  width: 0;
+}

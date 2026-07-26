@@ -1,0 +1,73 @@
+/* NetworkGraph.module.css — Cytoscape container with sci-fi overlays */
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #111118 0%, #0a0a0f 70%);
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Subtle scanline overlay for cyberpunk depth */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 212, 170, 0.015) 2px,
+    rgba(0, 212, 170, 0.015) 4px
+  );
+}
+
+/* Corner bracket decorations */
+.corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.cornerTL {
+  top: 12px;
+  left: 12px;
+  border-top: 2px solid rgba(0, 212, 170, 0.3);
+  border-left: 2px solid rgba(0, 212, 170, 0.3);
+}
+
+.cornerTR {
+  top: 12px;
+  right: 12px;
+  border-top: 2px solid rgba(0, 212, 170, 0.3);
+  border-right: 2px solid rgba(0, 212, 170, 0.3);
+}
+
+.cornerBL {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 2px solid rgba(0, 212, 170, 0.3);
+  border-left: 2px solid rgba(0, 212, 170, 0.3);
+}
+
+.cornerBR {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 2px solid rgba(0, 212, 170, 0.3);
+  border-right: 2px solid rgba(0, 212, 170, 0.3);
+}

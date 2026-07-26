@@ -1,0 +1,54 @@
+/* ============================================================
+   MoneyTrailSankey — container, chart area, and legend
+   ============================================================ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.25rem 1.5rem 1rem;
+  min-height: 450px;
+  /* No inner background — parent glass-card provides it */
+  background: transparent !important;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.01em;
+}
+
+/* Chart area — fills remaining vertical space */
+.chartWrapper {
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 380px;
+}
+
+/* ---- Legend bar ---- */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

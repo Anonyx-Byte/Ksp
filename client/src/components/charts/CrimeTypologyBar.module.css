@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filterSelect {
+  padding: 4px 8px;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  border-color: rgba(0, 255, 204, 0.3);
+}
+
+.filterSelect option {
+  background: var(--bg-tertiary);
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 52px 40px;
+  align-items: center;
+  gap: 8px;
+}
+
+.barLabel {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barTrack {
+  height: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 4px;
+}
+
+.barCount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.barPct {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-align: right;
+}

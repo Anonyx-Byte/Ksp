@@ -1,0 +1,182 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filterSelect {
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filterSelect:focus {
+  border-color: rgba(0, 255, 204, 0.4);
+}
+
+.filterSelect option {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.panelsRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex: 1;
+  min-height: 220px;
+}
+
+@media (max-width: 768px) {
+  .panelsRow {
+    flex-direction: column;
+  }
+}
+
+.panel {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8b8b9e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.chartWrapper {
+  flex: 1;
+  width: 100%;
+  min-height: 180px;
+}
+
+.countCard {
+  flex: 1;
+  min-width: 0;
+  background: rgba(0, 255, 204, 0.02);
+  border: 1px solid rgba(0, 255, 204, 0.12);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.districtBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00ffcc;
+  background: rgba(0, 255, 204, 0.08);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.totalNumber {
+  font-family: var(--font-mono);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #e8e8ed;
+  line-height: 1;
+  margin-bottom: 6px;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+.totalLabel {
+  font-size: 0.75rem;
+  color: #8b8b9e;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.subStats {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  justify-content: center;
+}
+
+.subStatItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subStatValue {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e8e8ed;
+}
+
+.subStatLabel {
+  font-size: 0.65rem;
+  color: #555566;
+  text-transform: uppercase;
+}
+
+.aiInsightPanel {
+  background: rgba(255, 51, 85, 0.05);
+  border: 1px solid rgba(255, 51, 85, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aiHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.aiText {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e8e8ed;
+  line-height: 1.5;
+}
+
+.aiText strong {
+  color: #ff3355;
+}

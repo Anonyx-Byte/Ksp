@@ -1,0 +1,49 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0 2rem 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.topSection {
+  width: 100%;
+}
+
+.middleSection {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 1.5rem;
+}
+
+.sankeyWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sankeyContainer {
+  min-height: 450px;
+}
+
+.investigatedContainer {
+  flex: 1;
+  min-height: 250px;
+}
+
+.alertsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomSection {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .middleSection {
+    grid-template-columns: 1fr;
+  }
+}
