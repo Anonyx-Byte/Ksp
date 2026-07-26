@@ -1,0 +1,16 @@
+{
+
+  "functions": {
+    "targets": [
+      "api"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "appsail": [
+    {
+      "source": "appsail-build",
+      "name": "iris-dashboard"
+    }
+  ]
+}

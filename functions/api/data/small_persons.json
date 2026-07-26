@@ -1,0 +1,484 @@
+[
+  {
+    "AccusedMasterID": 1,
+    "CaseMasterID": 1,
+    "AccusedName": "Manjunath Yadav",
+    "AgeYear": 24,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 2,
+    "CaseMasterID": 1,
+    "AccusedName": "Rakesh Bhat",
+    "AgeYear": 28,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 3,
+    "CaseMasterID": 1,
+    "AccusedName": "Meghana Singh",
+    "AgeYear": 28,
+    "GenderID": "F",
+    "PersonID": "A3"
+  },
+  {
+    "AccusedMasterID": 4,
+    "CaseMasterID": 2,
+    "AccusedName": "Swathi Gowda",
+    "AgeYear": 26,
+    "GenderID": "F",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 5,
+    "CaseMasterID": 2,
+    "AccusedName": "Vijay Naik",
+    "AgeYear": 35,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 6,
+    "CaseMasterID": 2,
+    "AccusedName": "Anil Naik",
+    "AgeYear": 27,
+    "GenderID": "M",
+    "PersonID": "A3"
+  },
+  {
+    "AccusedMasterID": 7,
+    "CaseMasterID": 3,
+    "AccusedName": "Puneeth Kumar",
+    "AgeYear": 35,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 8,
+    "CaseMasterID": 3,
+    "AccusedName": "Prakash Kulkarni",
+    "AgeYear": 30,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 9,
+    "CaseMasterID": 4,
+    "AccusedName": "Ramesh Joshi",
+    "AgeYear": 48,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 10,
+    "CaseMasterID": 4,
+    "AccusedName": "Vijay Shetty",
+    "AgeYear": 21,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 11,
+    "CaseMasterID": 4,
+    "AccusedName": "Anil Shetty",
+    "AgeYear": 25,
+    "GenderID": "M",
+    "PersonID": "A3"
+  },
+  {
+    "AccusedMasterID": 12,
+    "CaseMasterID": 4,
+    "AccusedName": "Santosh Naik",
+    "AgeYear": 42,
+    "GenderID": "M",
+    "PersonID": "A4"
+  },
+  {
+    "AccusedMasterID": 13,
+    "CaseMasterID": 5,
+    "AccusedName": "Santosh Sharma",
+    "AgeYear": 27,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 14,
+    "CaseMasterID": 6,
+    "AccusedName": "Santosh Kulkarni",
+    "AgeYear": 34,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 15,
+    "CaseMasterID": 7,
+    "AccusedName": "Puneeth Sharma",
+    "AgeYear": 34,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 16,
+    "CaseMasterID": 7,
+    "AccusedName": "Vinay Yadav",
+    "AgeYear": 35,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 17,
+    "CaseMasterID": 7,
+    "AccusedName": "Pradeep Hegde",
+    "AgeYear": 23,
+    "GenderID": "M",
+    "PersonID": "A3"
+  },
+  {
+    "AccusedMasterID": 18,
+    "CaseMasterID": 8,
+    "AccusedName": "Manjunath Singh",
+    "AgeYear": 26,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 19,
+    "CaseMasterID": 8,
+    "AccusedName": "Vijay Singh",
+    "AgeYear": 31,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 20,
+    "CaseMasterID": 8,
+    "AccusedName": "Anil Singh",
+    "AgeYear": 49,
+    "GenderID": "M",
+    "PersonID": "A3"
+  },
+  {
+    "AccusedMasterID": 21,
+    "CaseMasterID": 8,
+    "AccusedName": "Sahana Naik",
+    "AgeYear": 37,
+    "GenderID": "T",
+    "PersonID": "A4"
+  },
+  {
+    "AccusedMasterID": 22,
+    "CaseMasterID": 9,
+    "AccusedName": "Pradeep Hegde",
+    "AgeYear": 50,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 23,
+    "CaseMasterID": 9,
+    "AccusedName": "Anil Sharma",
+    "AgeYear": 46,
+    "GenderID": "M",
+    "PersonID": "A2"
+  },
+  {
+    "AccusedMasterID": 24,
+    "CaseMasterID": 10,
+    "AccusedName": "Karthik Singh",
+    "AgeYear": 34,
+    "GenderID": "M",
+    "PersonID": "A1"
+  },
+  {
+    "AccusedMasterID": 25,
+    "CaseMasterID": 10,
+    "AccusedName": "Arun Gowda",
+    "AgeYear": 32,
+    "GenderID": "M",
+    "PersonID": "A2"
+  }
+]
+
+[
+  {
+    "VictimMasterID": 1,
+    "CaseMasterID": 1,
+    "VictimName": "Pooja Joshi",
+    "AgeYear": 74,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 2,
+    "CaseMasterID": 1,
+    "VictimName": "Geetha Hegde",
+    "AgeYear": 19,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 3,
+    "CaseMasterID": 2,
+    "VictimName": "Roopa Sharma",
+    "AgeYear": 53,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 4,
+    "CaseMasterID": 2,
+    "VictimName": "Arun Hegde",
+    "AgeYear": 40,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 5,
+    "CaseMasterID": 3,
+    "VictimName": "Puneeth Kulkarni",
+    "AgeYear": 30,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 6,
+    "CaseMasterID": 3,
+    "VictimName": "Ramesh Patil",
+    "AgeYear": 47,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 7,
+    "CaseMasterID": 4,
+    "VictimName": "Rekha Yadav",
+    "AgeYear": 37,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 8,
+    "CaseMasterID": 4,
+    "VictimName": "Karthik Kumar",
+    "AgeYear": 58,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 9,
+    "CaseMasterID": 5,
+    "VictimName": "Asha Shetty",
+    "AgeYear": 51,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 10,
+    "CaseMasterID": 5,
+    "VictimName": "Basavaraj Kumar",
+    "AgeYear": 43,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 11,
+    "CaseMasterID": 6,
+    "VictimName": "Nithin Joshi",
+    "AgeYear": 50,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 12,
+    "CaseMasterID": 6,
+    "VictimName": "Santosh Patil",
+    "AgeYear": 74,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 13,
+    "CaseMasterID": 6,
+    "VictimName": "Sunil Gowda",
+    "AgeYear": 23,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 14,
+    "CaseMasterID": 7,
+    "VictimName": "Vijay Kulkarni",
+    "AgeYear": 51,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 15,
+    "CaseMasterID": 8,
+    "VictimName": "Pradeep Shetty",
+    "AgeYear": 32,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 16,
+    "CaseMasterID": 8,
+    "VictimName": "Asha Reddy",
+    "AgeYear": 59,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 17,
+    "CaseMasterID": 8,
+    "VictimName": "Anil Joshi",
+    "AgeYear": 44,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 18,
+    "CaseMasterID": 9,
+    "VictimName": "Kiran Hiremath",
+    "AgeYear": 47,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 19,
+    "CaseMasterID": 9,
+    "VictimName": "Anusha Hiremath",
+    "AgeYear": 32,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 20,
+    "CaseMasterID": 9,
+    "VictimName": "Kiran Sharma",
+    "AgeYear": 63,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 21,
+    "CaseMasterID": 10,
+    "VictimName": "Rashmi Shetty",
+    "AgeYear": 48,
+    "GenderID": "F",
+    "VictimPolice": "0"
+  },
+  {
+    "VictimMasterID": 22,
+    "CaseMasterID": 10,
+    "VictimName": "Santosh Hiremath",
+    "AgeYear": 59,
+    "GenderID": "M",
+    "VictimPolice": "0"
+  }
+]
+
+[
+  {
+    "ComplainantID": 1,
+    "CaseMasterID": 1,
+    "ComplainantName": "Pooja Joshi",
+    "AgeYear": 74,
+    "OccupationID": 16,
+    "ReligionID": 2,
+    "CasteID": 6,
+    "GenderID": "F"
+  },
+  {
+    "ComplainantID": 2,
+    "CaseMasterID": 2,
+    "ComplainantName": "Roopa Sharma",
+    "AgeYear": 53,
+    "OccupationID": 9,
+    "ReligionID": 2,
+    "CasteID": 2,
+    "GenderID": "F"
+  },
+  {
+    "ComplainantID": 3,
+    "CaseMasterID": 3,
+    "ComplainantName": "Meghana Reddy",
+    "AgeYear": 57,
+    "OccupationID": 1,
+    "ReligionID": 5,
+    "CasteID": 5,
+    "GenderID": "F"
+  },
+  {
+    "ComplainantID": 4,
+    "CaseMasterID": 4,
+    "ComplainantName": "Rekha Yadav",
+    "AgeYear": 37,
+    "OccupationID": 6,
+    "ReligionID": 2,
+    "CasteID": 3,
+    "GenderID": "F"
+  },
+  {
+    "ComplainantID": 5,
+    "CaseMasterID": 5,
+    "ComplainantName": "Asha Shetty",
+    "AgeYear": 51,
+    "OccupationID": 5,
+    "ReligionID": 3,
+    "CasteID": 3,
+    "GenderID": "F"
+  },
+  {
+    "ComplainantID": 6,
+    "CaseMasterID": 6,
+    "ComplainantName": "Nithin Joshi",
+    "AgeYear": 50,
+    "OccupationID": 19,
+    "ReligionID": 5,
+    "CasteID": 1,
+    "GenderID": "M"
+  },
+  {
+    "ComplainantID": 7,
+    "CaseMasterID": 7,
+    "ComplainantName": "Rakesh Shetty",
+    "AgeYear": 40,
+    "OccupationID": 9,
+    "ReligionID": 3,
+    "CasteID": 2,
+    "GenderID": "M"
+  },
+  {
+    "ComplainantID": 8,
+    "CaseMasterID": 8,
+    "ComplainantName": "Arun Bhat",
+    "AgeYear": 42,
+    "OccupationID": 7,
+    "ReligionID": 5,
+    "CasteID": 9,
+    "GenderID": "M"
+  },
+  {
+    "ComplainantID": 9,
+    "CaseMasterID": 9,
+    "ComplainantName": "Kiran Hiremath",
+    "AgeYear": 47,
+    "OccupationID": 5,
+    "ReligionID": 4,
+    "CasteID": 1,
+    "GenderID": "M"
+  },
+  {
+    "ComplainantID": 10,
+    "CaseMasterID": 10,
+    "ComplainantName": "Rashmi Shetty",
+    "AgeYear": 48,
+    "OccupationID": 18,
+    "ReligionID": 4,
+    "CasteID": 6,
+    "GenderID": "F"
+  }
+]

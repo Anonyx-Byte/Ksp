@@ -1,0 +1,12 @@
+{
+	"name": "api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "",
+	"dependencies": {
+		"cors": "^2.8.6",
+		"csv-parser": "^3.2.1",
+		"express": "^5.2.1",
+		"zcatalyst-sdk-node": "latest"
+	}
+}

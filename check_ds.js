@@ -1,0 +1,1 @@
+const catalyst = require('zcatalyst-sdk-node'); const app = catalyst.initialize(); app.zcql().executeZCQLQuery('SELECT count(CaseMasterID) FROM CaseMaster').then(console.log).catch(console.error); app.zcql().executeZCQLQuery('SELECT count(UnitID) FROM Police_Stations').then(console.log).catch(console.error);
