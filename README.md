@@ -14,8 +14,6 @@
 
 **Dashboard:** [https://iris-dashboard-50044286164.development.catalystappsail.in](https://iris-dashboard-50044286164.development.catalystappsail.in)
 
-**API:** [https://ksp-datathon-60079672744.development.catalystserverless.in/server/api/](https://ksp-datathon-60079672744.development.catalystserverless.in/server/api/)
-
 ---
 
 ## ✨ Features
